@@ -1,4 +1,4 @@
-# Loki-Grafana-integration
+# Loki-Grafana Integration
 **Prerequisites:**
 
 **i. S3 storage**
