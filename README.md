@@ -24,15 +24,15 @@ $ oc create -f logging.openshift.io_elasticsearches.yaml
   II] Create Secrete for S3
 ~~~
 $ oc project openshift-logging
-$ oc create -f loki-s3-secret.yaml
+$ oc create -f config/loki-s3-secret.yaml
 ~~~
 5. Create LokiStack CR
 ~~~
-$ oc create -f logging-loki.yaml
+$ oc create -f config/logging-loki.yaml
 ~~~
 6. Create ClusterLogging CR
 ~~~
-$ oc create -f clusterlogging.yaml
+$ oc create -f config/clusterlogging.yaml
 ~~~
 7. Verify all the pods are running
 ~~~
@@ -46,10 +46,10 @@ $ oc get pods -n openshift-logging -w
 ~~~
 10. Configure grafana
 ~~~
-$ oc create -f grafana-cr-proxy-secret.yaml
-$ oc create -f grafana-cr-htpasswd-secret.yaml
-$ oc create -f grafana-cr-creds-secret.yaml
-$ oc create -f grafana-cr.yaml 
+$ oc create -f config/grafana-cr-proxy-secret.yaml
+$ oc create -f config/grafana-cr-htpasswd-secret.yaml
+$ oc create -f config/grafana-cr-creds-secret.yaml
+$ oc create -f config/grafana-cr.yaml 
 $ oc get pods -w -n openshift-logging
 ~~~
 11. Login to grafana console
