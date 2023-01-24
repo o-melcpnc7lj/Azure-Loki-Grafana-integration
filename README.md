@@ -18,6 +18,7 @@ $ oc create -f logging.openshift.io_elasticsearches.yaml
 4. Configure Loki
 
   I] Create S3 bucket in AWS
+  
   II] Create Secrete for S3
 ~~~
 $ oc project openshift-logging
