@@ -15,7 +15,7 @@ $ oc get pods -w -n openshift-operators-redhat
 ~~~
 3. Create CRD for ES
 ~~~
-$ oc create -f logging.openshift.io_elasticsearches.yaml
+$ oc create -f config/logging.openshift.io_elasticsearches.yaml
 ~~~
 4. Configure Loki
 
