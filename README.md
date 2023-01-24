@@ -4,12 +4,13 @@ i. S3 storage
 ii. ROSA/ARO/OCP 4.11 cluster
 
 1. To start with Loki, install cluster logging operator in `openshift-logging` namespace from the operator hub
-
+~~~
 $ oc get pods -w -n openshift-logging
-
+~~~
 2. Install loki operator
+~~~
 $ oc get pods -w -n openshift-operators-redhat
-
+~~~
 3. Create CRD for ES
 $ oc create -f logging.openshift.io_elasticsearches.yaml
 
