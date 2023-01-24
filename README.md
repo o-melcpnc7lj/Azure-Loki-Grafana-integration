@@ -58,7 +58,7 @@ $ oc get pods -w -n openshift-logging
 
 I] Modify the grafana-datasources.yaml file to add bearer token for grafana service account
 ~~~
-$ oc sa get-token grafana-serviceaccount (If this doesn't work out then next step)
+$ oc sa get-token grafana-serviceaccount (If this doesn't work for some reason, extract the token from the secret as demonstrated in the next step)
 $ oc get sa -oyaml grafana-serviceaccount (Check the secret and copy token and replace it with $BEARER_TOKEN in prometheus datasource)
 ~~~
 Add the role to the Grafana serviceaccount:
