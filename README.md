@@ -1,7 +1,9 @@
 # Loki-Grafana-integration
-Prerequisites:
-i. S3 storage
-ii. ROSA/ARO/OCP 4.11 cluster
+**Prerequisites:**
+
+**i. S3 storage
+
+**ii. ROSA/ARO/OCP 4.11 cluster
 
 1. To start with Loki, install cluster logging operator in `openshift-logging` namespace from the operator hub
 ~~~
