@@ -1,9 +1,9 @@
 # Loki-Grafana Integration
 **Prerequisites:**
 
-**i. S3 storage**
+**i. Azure BloB storage**
 
-**ii. ROSA/ARO/OCP 4.11 cluster**
+**ii. ARO/OCP 4.11 cluster**
 
 1. To start with Loki, install cluster logging operator in `openshift-logging` namespace from the operator hub
 ~~~
@@ -19,12 +19,12 @@ $ oc create -f config/logging.openshift.io_elasticsearches.yaml
 ~~~
 4. Configure Loki
 
-  I] Create S3 bucket in AWS
+  I] Create storage account and Azure Blob in Azure
   
-  II] Create Secrete for S3
+  II] Create Secrete for azure storage account
 ~~~
 $ oc project openshift-logging
-$ oc create -f config/loki-s3-secret.yaml
+$ oc create -f config/loki-azure-secret.yaml
 ~~~
 5. Create LokiStack CR
 ~~~
