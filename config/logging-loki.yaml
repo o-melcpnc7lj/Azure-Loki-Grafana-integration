@@ -10,8 +10,8 @@ spec:
     - version: v12
       effectiveDate: '2022-06-01'
     secret:
-      name: logging-loki-s3
-      type: s3
+      name: azure-storage-secret
+      type: azure
   storageClassName: gp2
   tenants:
     mode: openshift-logging
