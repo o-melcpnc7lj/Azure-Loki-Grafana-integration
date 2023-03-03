@@ -13,10 +13,7 @@ $ oc get pods -w -n openshift-logging
 ~~~
 $ oc get pods -w -n openshift-operators-redhat
 ~~~
-3. Create CRD for ES
-~~~
-$ oc create -f config/logging.openshift.io_elasticsearches.yaml
-~~~
+
 4. Configure Loki
 
   I] Create storage account and Azure Blob in Azure
